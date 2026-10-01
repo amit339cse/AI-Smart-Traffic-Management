@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #020617;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* GLASS EFFECT */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HOVER */
+.hover {
+  transition: all 0.3s ease;
+}
+
+.hover:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* 🚗 TRAFFIC FLOW ANIMATION */
+@keyframes move0 {
+  from { transform: translate(0,0); }
+  to { transform: translate(60px,40px); }
+}
+
+@keyframes move1 {
+  from { transform: translate(0,0); }
+  to { transform: translate(-50px,30px); }
+}
+
+@keyframes move2 {
+  from { transform: translate(0,0); }
+  to { transform: translate(30px,-60px); }
+}
+
+/* 🌊 ROUTE FLOW */
+@keyframes flow {
+  0% { transform: translateX(-100px); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100px); opacity: 0; }
+}
